@@ -1,8 +1,7 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -22,7 +21,17 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@mean/interceptor": ["src/app/core/interceptors"],
+      "@mean/public": ["src/app/components/public"],
+      "@mean/admin": ["src/app/components/private/admin"],
+      "@mean/students": ["src/app/components/private/students"],
+      "@mean/shared": ["src/app/shared"],
+      "@mean/utils": ["src/app/utils"],
+      "@mean/models": ["src/app/models"],
+      "@mean/services": ["src/app/services"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,131 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$font-family-primary: 'Poppins';
+
+// Definir la tipografía global usando Poppins
+$custom-typography: mat.define-typography-config(
+  $font-family: 'Poppins, sans-serif',
+  $headline1: mat.define-typography-level(96px, 112px, 300),
+  $headline2: mat.define-typography-level(60px, 72px, 300),
+  $headline3: mat.define-typography-level(48px, 56px, 400),
+  $headline4: mat.define-typography-level(34px, 48px, 400),
+  $headline5: mat.define-typography-level(24px, 32px, 400),
+  $headline6: mat.define-typography-level(20px, 32px, 500),
+  $subtitle1: mat.define-typography-level(16px, 24px, 400),
+  $subtitle2: mat.define-typography-level(14px, 24px, 500),
+  $body1: mat.define-typography-level(16px, 24px, 400),
+  $body2: mat.define-typography-level(14px, 20px, 400),
+  $button: mat.define-typography-level(14px, 16px, 500),
+  $caption: mat.define-typography-level(12px, 16px, 400),
+  $overline: mat.define-typography-level(10px, 16px, 400)
+);
+
+// Definir las paletas para el tema claro
+$primary-palette-light: (
+  50: #D8E2FF,
+  100: #ADC6FF,
+  200: #92ABE2,
+  300: #7890C6,
+  400: #5E77AA,
+  500: #455E90,
+  600: #2C4676,
+  700: #203A6A,
+  800: #122F5E,
+  900: #001A41,
+);
+
+$secondary-palette-light: (
+  50: #D7E4F5,
+  100: #BBC8D9,
+  200: #9FACBD,
+  300: #8592A2,
+  400: #6C7888, 
+  500: #53606E,
+  600: #475462,
+  700: #3B4856,
+  800: #303D4A,
+  900: #25313F,
+);
+
+$tertiary-palette-light: (
+  50: #D6E3FF,
+  100: #A9C7FF,
+  200: #83ACF1,
+  300: #6991D5,
+  400: #4E77B9,
+  500: #335E9E,
+  600: #245291,
+  700: #134685,
+  800: #003B77,
+  900: #003063,
+);
+
+// Definir las paletas para el tema oscuro
+$primary-palette-dark: (
+  50: #001A41,
+  100: #2B4678,
+  200: #ADC6FF,
+  300: #92ABE2,
+  400: #7890C6,
+  500: #455E90,
+  600: #2C4676,
+  700: #122F5E,
+  800: #203A6A,
+  900: #001A41,
+);
+
+$secondary-palette-dark: (
+  50: #001D34,
+  100: #124A73,
+  200: #9DCBFB,
+  300: #6795C2,
+  400: #4A78A4,
+  500: #31628D,
+  600: #0B466F,
+  700: #00243E,
+  800: #00182B,
+  900: #00102D,
+);
+
+$tertiary-palette-dark: (
+  50: #001B3D,
+  100: #264777,
+  200: #A9C7FF,
+  300: #6991D5,
+  400: #4E77B9,
+  500: #335E9E,
+  600: #245291,
+  700: #134685,
+  800: #003B77,
+  900: #002249,
+);
+
+// Definir el tema claro
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: mat.define-palette($primary-palette-light),
+    secondary: mat.define-palette($secondary-palette-light),
+    tertiary: mat.define-palette($tertiary-palette-light),
+  ),
+  typography: $custom-typography
+));
+
+// Definir el tema oscuro
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: mat.define-palette($primary-palette-dark),
+    secondary: mat.define-palette($secondary-palette-dark),
+    tertiary: mat.define-palette($tertiary-palette-dark),
+  ),
+  typography: $custom-typography
+));
+
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+}
+
+.dark-theme {
+  @include mat.all-component-themes($dark-theme);
+}
