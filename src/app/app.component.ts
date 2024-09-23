@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +10,4 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent {
   title = 'POS-AD-frontend';
-
-  ngOnInit(): void {
-    initFlowbite();
-  }
 }

@@ -2,28 +2,26 @@
 
 @include mat.core();
 
-$font-family-primary: 'Poppins';
-
 // Definir la tipografía global usando Poppins
 $custom-typography: mat.define-typography-config(
   $font-family: 'Poppins, sans-serif',
-  $headline1: mat.define-typography-level(96px, 112px, 300),
-  $headline2: mat.define-typography-level(60px, 72px, 300),
-  $headline3: mat.define-typography-level(48px, 56px, 400),
-  $headline4: mat.define-typography-level(34px, 48px, 400),
-  $headline5: mat.define-typography-level(24px, 32px, 400),
-  $headline6: mat.define-typography-level(20px, 32px, 500),
-  $subtitle1: mat.define-typography-level(16px, 24px, 400),
-  $subtitle2: mat.define-typography-level(14px, 24px, 500),
-  $body1: mat.define-typography-level(16px, 24px, 400),
-  $body2: mat.define-typography-level(14px, 20px, 400),
+  $headline-1: mat.define-typography-level(96px, 112px, 300),
+  $headline-2: mat.define-typography-level(60px, 72px, 300),
+  $headline-3: mat.define-typography-level(48px, 56px, 400),
+  $headline-4: mat.define-typography-level(34px, 48px, 400),
+  $headline-5: mat.define-typography-level(24px, 32px, 400),
+  $headline-6: mat.define-typography-level(20px, 32px, 500),
+  $subtitle-1: mat.define-typography-level(16px, 24px, 400),
+  $subtitle-2: mat.define-typography-level(14px, 24px, 500),
+  $body-1: mat.define-typography-level(16px, 24px, 400),
+  $body-2: mat.define-typography-level(14px, 20px, 400),
   $button: mat.define-typography-level(14px, 16px, 500),
   $caption: mat.define-typography-level(12px, 16px, 400),
   $overline: mat.define-typography-level(10px, 16px, 400)
 );
 
 // Definir las paletas para el tema claro
-$primary-palette-light: (
+$primary-palette-light: mat.define-palette((
   50: #D8E2FF,
   100: #ADC6FF,
   200: #92ABE2,
@@ -34,9 +32,25 @@ $primary-palette-light: (
   700: #203A6A,
   800: #122F5E,
   900: #001A41,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
 
-$secondary-palette-light: (
+$secondary-palette-light: mat.define-palette((
   50: #D7E4F5,
   100: #BBC8D9,
   200: #9FACBD,
@@ -47,9 +61,25 @@ $secondary-palette-light: (
   700: #3B4856,
   800: #303D4A,
   900: #25313F,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
 
-$tertiary-palette-light: (
+$tertiary-palette-light: mat.define-palette((
   50: #D6E3FF,
   100: #A9C7FF,
   200: #83ACF1,
@@ -60,10 +90,60 @@ $tertiary-palette-light: (
   700: #134685,
   800: #003B77,
   900: #003063,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
+
+// Definir paleta de acento para el tema claro
+$accent-palette-light: mat.define-palette((
+  50 : #f9e0e2,
+    100 : #f0b3b3,
+    200 : #e68080,
+    300 : #db4d4d,
+    400 : #d42626,
+    500 : #cc0000,
+    600 : #c70000,
+    700 : #c00000,
+    800 : #b90000,
+    900 : #ad0000,
+    A100 : #ffd7d7,
+    A200 : #ffa4a4,
+    A400 : #ff7171,
+    A700 : #ff5858,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+));
 
 // Definir las paletas para el tema oscuro
-$primary-palette-dark: (
+$primary-palette-dark: mat.define-palette((
   50: #001A41,
   100: #2B4678,
   200: #ADC6FF,
@@ -74,9 +154,25 @@ $primary-palette-dark: (
   700: #122F5E,
   800: #203A6A,
   900: #001A41,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
 
-$secondary-palette-dark: (
+$secondary-palette-dark: mat.define-palette((
   50: #001D34,
   100: #124A73,
   200: #9DCBFB,
@@ -87,9 +183,25 @@ $secondary-palette-dark: (
   700: #00243E,
   800: #00182B,
   900: #00102D,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
 
-$tertiary-palette-dark: (
+$tertiary-palette-dark: mat.define-palette((
   50: #001B3D,
   100: #264777,
   200: #A9C7FF,
@@ -100,14 +212,61 @@ $tertiary-palette-dark: (
   700: #134685,
   800: #003B77,
   900: #002249,
-);
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
+
+// Definir paleta de acento para el tema oscuro
+$accent-palette-dark: mat.define-palette((
+  50: #FF001A,
+  100: #FF203A,
+  200: #FF2C46,
+  300: #FF455E,
+  400: #FF5E77,
+  500: #FF7890,
+  600: #FF92AB,
+  700: #FFADC6,
+  800: #FFD8E4,
+  900: #FFFFFF,
+  contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+));
 
 // Definir el tema claro
 $light-theme: mat.define-light-theme((
   color: (
-    primary: mat.define-palette($primary-palette-light),
-    secondary: mat.define-palette($secondary-palette-light),
-    tertiary: mat.define-palette($tertiary-palette-light),
+    primary: $primary-palette-light,
+    secondary: $secondary-palette-light,
+    tertiary: $tertiary-palette-light,
+    accent: $accent-palette-light,
   ),
   typography: $custom-typography
 ));
@@ -115,17 +274,16 @@ $light-theme: mat.define-light-theme((
 // Definir el tema oscuro
 $dark-theme: mat.define-dark-theme((
   color: (
-    primary: mat.define-palette($primary-palette-dark),
-    secondary: mat.define-palette($secondary-palette-dark),
-    tertiary: mat.define-palette($tertiary-palette-dark),
+    primary: $primary-palette-dark,
+    secondary: $secondary-palette-dark,
+    tertiary: $tertiary-palette-dark,
+    accent: $accent-palette-dark,
   ),
   typography: $custom-typography
 ));
 
-.light-theme {
-  @include mat.all-component-themes($light-theme);
-}
+@include mat.all-component-themes($light-theme);
 
 .dark-theme {
-  @include mat.all-component-themes($dark-theme);
+  @include mat.all-component-colors($dark-theme);
 }
