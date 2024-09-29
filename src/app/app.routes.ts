@@ -1,6 +1,12 @@
 import { Routes } from '@angular/router';
+import { LoginContainerComponent } from './components/public/login/login-container/login-container/login-container.component';
 
 export const routes: Routes = [
+  {
+    path: '**',
+    pathMatch: 'full',
+    component: LoginContainerComponent,
+  } 
 
 /*   {
     path: '',
@@ -11,9 +17,5 @@ export const routes: Routes = [
     path: 'admin',
     //loadChildren: () => import('./components/private/admins/admin.route')
   },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: '',
-  } */
+  */
 ];

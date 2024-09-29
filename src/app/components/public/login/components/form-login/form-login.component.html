@@ -1,0 +1,20 @@
+<section class="login-container">
+  <div class="">
+    <img loading="lazy" src="/assets/images/login/LOGO ACEROS DURAN.png" class="logo" alt="Company logo" />
+    <form (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="username" class="form-label">Usuario</label>
+        <input type="text" id="username" class="form-input" aria-label="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Contraseña</label>
+        <input [type]="isPasswordVisible ? 'text' : 'password'" id="password" class="form-input" aria-label="Enter your password">
+        <div class="password-actions">
+          <button type="button" class="forgot-password" (click)="forgotPassword()">¿Has olvidado tu contraseña?</button>
+          <img  loading="lazy" src="/assets/images/login/eye.svg" class="eye-icon" alt="" (click)="togglePasswordVisibility()"/>
+        </div>
+      </div>
+      <button type="submit" class="submit-button">Iniciar sesión</button>
+    </form>
+  </div>
+</section>

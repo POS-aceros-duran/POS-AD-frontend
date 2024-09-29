@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { AuthInterceptor } from '@mean/interceptor';
+import { AuthInterceptor } from '@app/interceptor';
 
 const serverConfig: ApplicationConfig = {
   providers: [

@@ -1,0 +1,37 @@
+  /* El contenedor del login debe ocupar toda la pantalla */
+  .login-container {
+    display: flex;
+    width: 100vw; /* 100% del ancho de la pantalla */
+    height: 100vh; /* 100% de la altura de la pantalla */
+    overflow: hidden; /* Evitar cualquier scroll */
+  }
+  
+  /* El slider debe ocupar la mitad izquierda */
+  .slider {
+    flex: 1;
+    background-color: var(--material-theme-schemes-on-primary-container);
+  }
+  
+  /* El formulario debe ocupar la mitad derecha */
+  .form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--material-theme-schemes-background);
+  }
+  
+  /* Ocultar el slider en pantallas móviles y hacer que el formulario ocupe todo el ancho */
+  @media (max-width: 768px) {
+    .slider {
+      display: none; /* Ocultar el slider en pantallas pequeñas */
+    }
+  
+    .form {
+      flex: 1;
+      width: 100vw; /* Asegurarse de ocupar todo el ancho en mobile */
+      height: 100vh; /* Ocupar también toda la altura en mobile */
+      padding: 20px;
+    }
+  }
+  

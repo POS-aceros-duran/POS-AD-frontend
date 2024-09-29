@@ -1,0 +1,17 @@
+<section class="slider">
+  <div class="image-wrapper">
+    <span class="blur-img"></span>
+    <img [src]="slides[currentSlide].image" class="slider-image" alt="Slider image representing nuestras sucursales" />
+  </div>
+ <div class="text-wrapper">
+  <h2 class="slider-title">Te esperamos en nuestras</h2>
+  <h3 class="slider-subtitle">sucursales</h3>
+ </div>
+  <div class="slider-indicators">
+    @for (slide of slides; track $index) {
+      <button class="indicator"
+      [class.active]="$index === currentSlide"
+      (click)="goToSlide($index)"></button>
+    }   
+  </div>
+</section>
