@@ -6,6 +6,19 @@
 @import "@fontsource/poppins/400.css"; // Specify weight
 @import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegurar que no haya scroll en el body */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evitar scroll */
+}
+
 // Estilos globales
 html, body {
   font-family: 'Poppins', sans-serif;

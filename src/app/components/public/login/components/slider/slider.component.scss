@@ -1,0 +1,81 @@
+/* Contenedor del slider */
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--material-theme-schemes-on-primary-container);
+}
+
+/* Imagen del slider */
+.image-wrapper {
+  position: relative;
+}
+
+.blur-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--material-theme-blur); /* Capa semitransparente */
+  filter: blur(1px); /* Efecto de blur */
+  z-index: 1;
+}
+
+/* Imagen del slider */
+.slider-image {
+  width: 100vw;
+  height: 400px;
+  padding: 0;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+  z-index: 0;
+}
+
+/*contenerdor de los textos*/
+.text-wrapper{
+  margin: 20px;
+}
+
+/* Títulos del slider */
+.slider-title, .slider-subtitle {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: var(--material-theme-schemes-primary-container);
+}
+
+/* Título principal */
+.slider-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.slider-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Indicadores del slider */
+.slider-indicators {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  background-color: var(--material-theme-schemes-on-surface-variant); /* Color para los indicadores no activos */
+  border: 1px solid var(--material-theme-schemes-primary-container); /* Color de borde en estado no activo */
+  border-radius: 50%; /* Forma circular */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves para los cambios de estado */
+}
+
+.indicator.active {
+  background-color: var(--material-theme-schemes-on-primary-container); /* Color de fondo para el indicador activo */
+}

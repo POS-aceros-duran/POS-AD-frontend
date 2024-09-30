@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { ApiModel } from '@mean/models';
+import { ApiModel } from '@app/models';
 
 @Injectable({
   providedIn: 'root',

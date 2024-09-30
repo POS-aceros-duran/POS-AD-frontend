@@ -1,0 +1,107 @@
+.error {
+  color: var(--material-theme-schemes-error);
+  font-size: 12px;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  height: 100vh;           /* Ocupa toda la altura de la pantalla */
+}
+
+.login-form {
+  top: -100;
+  width: 100%;
+  max-width: 400px;        /* Ajusta el ancho máximo del formulario */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras opcionales para resaltar el formulario */
+  background-color: white; /* Color de fondo */
+  border-radius: 8px;      /* Bordes redondeados */
+  text-align: center;      /* Centra el contenido dentro del formulario */
+}
+
+
+//logo de la empresa
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 300px;
+  align-self: center;
+  max-width: 100%;
+}
+
+/* Estilo para los grupos de inputs */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Etiquetas de los inputs */
+.form-label {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: var(--material-theme-schemes-primary);
+}
+
+/* Inputs de usuario y contraseña */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--material-theme-schemes-on-primary-container);
+  box-shadow: 0px 2px 4px  rgba(49, 98, 141, 1);
+  outline: none;
+  border: none;
+}
+
+.form-input:focus {
+  border-color: var(--material-theme-schemes-primary);
+}
+
+/* Acciones dentro del campo de contraseña */
+.password-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Botón para recuperar la contraseña */
+.forgot-password {
+  background: none;
+  border: none;
+  color: var(--material-theme-schemes-primary);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Ícono del ojo */
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Botón de envío */
+.submit-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  background-color: var(--material-theme-schemes-on-primary-container);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: var(--material-theme-schemes-secondary);
+}
