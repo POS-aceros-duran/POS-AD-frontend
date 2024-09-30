@@ -1,6 +1,30 @@
 @use '@angular/material' as mat;
-
+@use './palettes';
 @include mat.core();
+
+
+
+// Define a dark theme
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: palettes.$primary-palette-light
+  ),
+));
+
+// Define a light theme
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: palettes.$primary-palette-light,
+  ),
+));
+
+html {
+  @include mat.core-theme($light-theme);
+}
+
+
 
 :root {
   --material-themewhite: rgba(255, 255, 255, 1);

@@ -28,3 +28,115 @@ html, body {
 }
 html, body { height: 100%; }
 body { margin: 0}
+
+@mixin light-theme {
+  --primary: #445E91;
+  --surfaceTint: #445E91;
+  --onPrimary: #FFFFFF;
+  --primaryContainer: #D8E2FF;
+  --onPrimaryContainer: #001A41;
+  --secondary: #31628D;
+  --onSecondary: #FFFFFF;
+  --secondaryContainer: #CFE5FF;
+  --onSecondaryContainer: #001D34;
+  --tertiary: #405F90;
+  --onTertiary: #FFFFFF;
+  --tertiaryContainer: #D6E3FF;
+  --onTertiaryContainer: #001B3D;
+  --error: #BA1A1A;
+  --onError: #FFFFFF;
+  --errorContainer: #FFDAD6;
+  --onErrorContainer: #410002;
+  --background: #F9F9FF;
+  --onBackground: #1A1B20;
+  --surface: #F5FAFB;
+  --onSurface: #171D1E;
+  --surfaceVariant: #DEE3EB;
+  --onSurfaceVariant: #42474E;
+  --outline: #73777F;
+  --outlineVariant: #C2C7CF;
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverseSurface: #2B3133;
+  --inverseOnSurface: #ECF2F3;
+  --inversePrimary: #ADC6FF;
+  --primaryFixed: #D8E2FF;
+  --onPrimaryFixed: #001A41;
+  --primaryFixedDim: #ADC6FF;
+  --onPrimaryFixedVariant: #2B4678;
+  --secondaryFixed: #CFE5FF;
+  --onSecondaryFixed: #001D34;
+  --secondaryFixedDim: #9DCBFB;
+  --onSecondaryFixedVariant: #124A73;
+  --tertiaryFixed: #D6E3FF;
+  --onTertiaryFixed: #001B3D;
+  --tertiaryFixedDim: #A9C7FF;
+  --onTertiaryFixedVariant: #264777;
+  --surfaceDim: #D5DBDC;
+  --surfaceBright: #F5FAFB;
+  --surfaceContainerLowest: #FFFFFF;
+  --surfaceContainerLow: #EFF5F6;
+  --surfaceContainer: #E9EFF0;
+  --surfaceContainerHigh: #E3E9EA;
+  --surfaceContainerHighest: #DEE3E5;
+}
+
+@mixin dark-theme {
+  --primary: #ADC6FF;
+  --surfaceTint: #ADC6FF;
+  --onPrimary: #112F60;
+  --primaryContainer: #2B4678;
+  --onPrimaryContainer: #D8E2FF;
+  --secondary: #9DCBFB;
+  --onSecondary: #003355;
+  --secondaryContainer: #124A73;
+  --onSecondaryContainer: #CFE5FF;
+  --tertiary: #A9C7FF;
+  --onTertiary: #08305F;
+  --tertiaryContainer: #264777;
+  --onTertiaryContainer: #D6E3FF;
+  --error: #FFB4AB;
+  --onError: #690005;
+  --errorContainer: #93000A;
+  --onErrorContainer: #FFDAD6;
+  --background: #111318;
+  --onBackground: #E2E2E9;
+  --surface: #0E1415;
+  --onSurface: #DEE3E5;
+  --surfaceVariant: #42474E;
+  --onSurfaceVariant: #C2C7CF;
+  --outline: #8C9199;
+  --outlineVariant: #42474E;
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverseSurface: #DEE3E5;
+  --inverseOnSurface: #2B3133;
+  --inversePrimary: #445E91;
+  --primaryFixed: #D8E2FF;
+  --onPrimaryFixed: #001A41;
+  --primaryFixedDim: #ADC6FF;
+  --onPrimaryFixedVariant: #2B4678;
+  --secondaryFixed: #CFE5FF;
+  --onSecondaryFixed: #001D34;
+  --secondaryFixedDim: #9DCBFB;
+  --onSecondaryFixedVariant:#124A73;
+  --tertiaryFixed: #D6E3FF;
+  --onTertiaryFixed: #001B3D;
+  --tertiaryFixedDim: #A9C7FF;
+  --onTertiaryFixedVariant: #264777;
+  --surfaceDim: #0E1415;
+  --surfaceBright: #343A3B;
+  --surfaceContainerLowest: #090F10;
+  --surfaceContainerLow: #171D1E;
+  --surfaceContainer: #1B2122;
+  --surfaceContainerHigh: #252B2C;
+  --surfaceContainerHighest: #303637;
+}
+
+:root {
+  @include light-theme;
+}
+
+.dark-theme {
+  @include dark-theme;
+}

@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/custom-theme.scss",
+              "src/styles/theming/custom-theme.scss",
               "src/styles.scss"
             ],
             "scripts": [],
