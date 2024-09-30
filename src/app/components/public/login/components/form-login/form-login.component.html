@@ -1,20 +1,40 @@
 <section class="login-container">
   <div class="">
     <img loading="lazy" src="/assets/images/login/LOGO ACEROS DURAN.png" class="logo" alt="Company logo" />
-    <form (ngSubmit)="login()">
+    <form [formGroup]="formGroup" (ngSubmit)="login()">
       <div class="form-group">
         <label for="username" class="form-label">Usuario</label>
-        <input type="text" id="username" class="form-input" aria-label="Enter your username">
+        <input formControlName="user" type="text" id="username" class="form-input" aria-label="Enter your username">
+        @if (formGroup.get('user')?.invalid && formGroup.get('user')?.touched) {
+          <div class="error">
+            @if (formGroup.get('user')?.errors?.['required']) {
+              <span>El usuario es obligatorio.</span>
+            }
+            @if (formGroup.get('user')?.errors?.['minlength']) {
+              <span>El usuario debe tener al menos 3 caracteres.</span>
+            }
+          </div>
+        }
       </div>
       <div class="form-group">
         <label for="password" class="form-label">Contraseña</label>
-        <input [type]="isPasswordVisible ? 'text' : 'password'" id="password" class="form-input" aria-label="Enter your password">
+        <input formControlName="pass" [type]="isPasswordVisible ? 'text' : 'password'" id="password" class="form-input" aria-label="Enter your password">
         <div class="password-actions">
           <button type="button" class="forgot-password" (click)="forgotPassword()">¿Has olvidado tu contraseña?</button>
           <img  loading="lazy" src="/assets/images/login/eye.svg" class="eye-icon" alt="" (click)="togglePasswordVisibility()"/>
         </div>
+        @if (formGroup.get('pass')?.invalid && formGroup.get('pass')?.touched) {
+          <div class="error">
+            @if (formGroup.get('pass')?.errors?.['required']) {
+              <span>La contraseña es obligatoria.</span>
+            }
+            @if (formGroup.get('pass')?.errors?.['minlength']) {
+              <span>La contraseña debe tener al menos 6 caracteres.</span>
+            }
+          </div>
+        }
       </div>
-      <button type="submit" class="submit-button">Iniciar sesión</button>
+      <button (click)="login()" [disabled]="formGroup.invalid || loading" type="submit" class="submit-button">Iniciar sesión</button>
     </form>
   </div>
 </section>

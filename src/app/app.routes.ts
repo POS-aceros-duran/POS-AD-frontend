@@ -3,10 +3,13 @@ import { LoginContainerComponent } from './components/public/login/login-contain
 
 export const routes: Routes = [
   {
+    path: 'sales-department',
+    loadChildren: () => import('./components/private/sales_department/sales_department.route')
+  },
+  {
     path: '**',
-    pathMatch: 'full',
     component: LoginContainerComponent,
-  } 
+  }
 
 /*   {
     path: '',

@@ -1,6 +1,6 @@
 import { isDevMode } from '@angular/core';
 
-const host = isDevMode() ? 'http://localhost:8080/aceros-duran/api/v1' : 'otherdomain.com';
+const host = isDevMode() ? 'http://localhost:8080/pos/api/v1' : 'otherdomain.com';
 const basePath = host;
 export class UriConstants {
   public static readonly HOST = host;
