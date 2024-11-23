@@ -7,8 +7,26 @@ export const routes: Routes = [
     loadChildren: () => import('./components/private/sales_department/sales_department.route')
   },
   {
-    path: '**',
+    path: '',
     component: LoginContainerComponent,
+  },
+  {
+    path: '',
+    loadComponent: () => import('./components/shared/components/layout/layout.component'),
+    children: [
+      {
+        path: 'dashboard',
+        loadComponent: () => import('./components/business/dashboard/dashboard.component')
+      },
+      {
+        path: 'profile',
+        loadComponent: () => import('./components/business/profile/profile.component')
+      },
+      {
+        path: 'tables',
+        loadComponent: () => import('./components/business/tables/tables.component')
+      }
+    ]
   }
 
 /*   {
