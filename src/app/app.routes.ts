@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginContainerComponent } from './components/public/login/login-container/login-container/login-container.component';
+import { DemoM3Component } from './components/private/sales_department/demo-m3/demo-m3.component';
+import { FormLoginComponent } from './components/public/login/components/form-login/form-login.component';
 
 export const routes: Routes = [
   {
@@ -25,7 +27,7 @@ export const routes: Routes = [
       {
         path: 'tables',
         loadComponent: () => import('./components/business/tables/tables.component')
-      }
+      } 
     ]
   }
 

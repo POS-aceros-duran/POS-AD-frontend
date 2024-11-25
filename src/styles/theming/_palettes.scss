@@ -1,0 +1,235 @@
+  @use "@angular/material" as mat;
+  @use "sass:map";
+  @include mat.core();
+
+  /// Adds the error colors to the given palette.
+  @function _patch-error-palette($palette) {
+    @return map.merge(
+      $palette,
+      (
+        error: (
+          0: #000000,
+          10: #410002,
+          20: #690005,
+          25: #7e0007,
+          30: #93000a,
+          35: #a80710,
+          40: #ba1a1a,
+          50: #de3730,
+          60: #ff5449,
+          70: #ff897d,
+          80: #ffb4ab,
+          90: #ffdad6,
+          95: #ffedea,
+          98: #fff8f7,
+          99: #fffbff,
+          100: #ffffff,
+        ),
+      )
+    );
+  }
+
+  // Definir las paletas para el tema claro
+  $primary-palette-light: _patch-error-palette(
+    (
+      0: #000000,
+      // Pure black
+      10: #001231,
+      // Darkest blue shade
+      20: #042554,
+      // Base color
+      25: #0a2e5f,
+      // Slightly lighter
+      30: #113669,
+      // Light blue
+      35: #173f74,
+      // Lighter blue
+      40: #1e477f,
+      // Mid-light blue
+      50: #2b5895,
+      // Medium blue
+      60: #3f6dac,
+      // Mid-bright blue
+      70: #5483c3,
+      // Bright blue
+      80: #6b9ada,
+      // Brighter blue
+      90: #83b1f1,
+      // Very bright blue
+      95: #a7c9ff,
+      // Ultra bright blue
+      98: #e4edff,
+      // Almost white blue
+      99: #f4f7ff,
+      // Nearly white
+      100: #ffffff,
+      // Pure white,
+      secondary:
+        (
+          0: #000000,
+          // Pure black
+          10: #1b1d21,
+          // Very dark gray with slight blue tint
+          20: #313439,
+          // Dark gray-blue
+          25: #3e424a,
+          // Deep gray
+          30: #4b4f58,
+          // Mid-dark gray
+          35: #595d67,
+          // Medium-dark gray
+          40: #676c77,
+          // Gray with blue undertone
+          50: #858b97,
+          // True gray-blue
+          60: #979ea9,
+          // Medium gray
+          70: #a8b0bc,
+          // Base gray
+          80: #b3c0d1,
+          // Base color
+          90: #cfd7e3,
+          // Light gray-blue
+          95: #e3e8ef,
+          // Very light gray
+          98: #f0f2f6,
+          // Almost white gray
+          99: #f7f8fa,
+          // Nearly white
+          100: #ffffff,
+          // Pure white,
+        ),    
+      neutral: (
+        0: #000000,
+        10: #292929,
+        20: #525252,
+        25: #666666,
+        30: #7a7a7a,
+        35: #8e8e8e,
+        40: #a1a1a1,
+        50: #c8c8c8,
+        60: #d4d4d4,
+        70: #dfdfdf,
+        80: #ebebeb,
+        90: #f6f6f6,
+        95: #fafafa,
+        98: #fdfdfd,
+        99: #fefefe,
+        100: #ffffff,
+        4: #0d0e11, 
+        6: #121316,
+        12: #1f2022,
+        17: #292a2c,
+        22: #343537,
+        24: #38393c,
+        87: #dbd9dd,
+        92: #e9e7eb,
+        94: #efedf0,
+        96: #f4f3f6,
+      ),
+      neutral-variant: (
+        0: #000000,
+        10: #1f2022,
+        20: #3e4044,
+        25: #4d4f54,
+        30: #5c5e64,
+        35: #6b6d74,
+        40: #7a7c84,
+        50: #9d9fa4,
+        60: #b1b3b7,
+        70: #c5c6c9,
+        80: #d8d9db,
+        90: #ececed,
+        95: #f5f5f6,
+        98: #fbfbfb,
+        99: #fdfdfd,
+        100: #ffffff,
+      ),
+    )
+  );    
+
+  //definir las paletas para el tema oscuro
+  $primary-palette-dark: _patch-error-palette(
+    (
+      0: #000000,   // Black
+      10: #001B3D,  
+      20: #002D5D,
+      25: #003670,
+      30: #004084,
+      35: #004A98,
+      40: #0054AC,
+      50: #1E68D0,
+      60: #4A7DE5,
+      70: #7193F5,
+      80: #ABC7FF,  // Original color
+      90: #D6E3FF,
+      95: #ECF1FF,
+      98: #F8FAFF,  
+      99: #FCFCFF,
+      100: #FFFFFF,  // White,
+      secondary: (
+        0: #000000,   // Black
+    10: #1A1C23,  
+    20: #2B2F37,
+    25: #363A43,
+    30: #41454F,
+    35: #4C515B,
+    40: #575C68,
+    50: #6B7180,
+    60: #8891A5,  // Original color
+    70: #A3AAB9,
+    80: #BEC3CE,
+    90: #DADDE4,
+    95: #E9EBF0,
+    98: #F3F4F7,
+    99: #F8F9FA,
+    100: #FFFFFF,
+      ),
+      neutral: (
+        0: #000000,
+        10: #1A1B1E,
+        20: #2F3033,
+        25: #38393D,
+        30: #46474B,
+        35: #515256,
+        40: #5E5E62,
+        50: #77777A,
+        60: #919093,
+        70: #ABABAE,
+        80: #C7C6CA,
+        90: #E3E2E6,
+        95: #F2F0F4,
+        98: #FBFAFD,
+        99: #FDFBFF,
+        100: #FFFFFF,
+        4: #0d0e11,
+        6: #121316,
+        12: #1f2022,
+        17: #292a2c,
+        22: #343537,
+        24: #38393c,
+        87: #dbd9dd,
+        92: #e9e7eb,
+        94: #efedf0,
+        96: #f4f3f6,
+      ),
+      neutral-variant: (
+        0: #000000,
+        10: #1B1E24,
+        20: #2F343C,
+        25: #393E47,
+        30: #44474E,
+        35: #50525B,
+        40: #5C5E68,
+        50: #777986,
+        60: #9294A1,
+        70: #ADB0BD,
+        80: #CACBD6,
+        90: #E5E5F0,
+        95: #F3F3FA,
+        98: #FCFCFE,
+        99: #FEFEFF,
+        100: #FFFFFF,
+      ),
+    )
+  );    
