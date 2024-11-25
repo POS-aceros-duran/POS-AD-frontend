@@ -8,13 +8,13 @@ export default [
                 (m) => m.StudentsLayoutComponent
             ),
         children: [
-            // {
-            //     path: 'addPatient',
-            //     loadComponent: () =>
-            //         import('./components/form-patient-personal-data/form-patient-personal-data.component').then(
-            //             (m) => m.FormPatientPersonalDataComponent
-            //         ),
-            // },
+            {
+                path: 'm3',
+                loadComponent: () =>
+                    import('./demo-m3/demo-m3.component').then(
+                        (m) => m.DemoM3Component
+                    ),
+            },
             {
                 path: '**',
                 pathMatch: 'full',

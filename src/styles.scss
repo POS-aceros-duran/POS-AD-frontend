@@ -2,38 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@fontsource/poppins"; // Defaults to weight 400
-@import "@fontsource/poppins/400.css"; // Specify weight
-@import "@fontsource/poppins/400-italic.css"; // Specify weight and style
-
-* {
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evitar scroll */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Asegurar que no haya scroll en el body */
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* Evitar scroll */
-}
 
-// Estilos globales
-html, body {
-  font-family: 'Poppins', sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-html, body { height: 100%; }
-body { margin: 0}
-
-@mixin light-theme {
+@mixin light {
   --primary: #445E91;
   --surfaceTint: #445E91;
   --onPrimary: #FFFFFF;
-  --primaryContainer: #D8E2FF;
+  --primaryContainer: #D8E2FF;    
   --onPrimaryContainer: #001A41;
   --secondary: #31628D;
   --onSecondary: #FFFFFF;
@@ -81,7 +65,7 @@ body { margin: 0}
   --surfaceContainerHighest: #DEE3E5;
 }
 
-@mixin dark-theme {
+@mixin dark {
   --primary: #ADC6FF;
   --surfaceTint: #ADC6FF;
   --onPrimary: #112F60;
@@ -134,9 +118,9 @@ body { margin: 0}
 }
 
 :root {
-  @include light-theme;
+  @include light;
 }
 
-.dark-theme {
-  @include dark-theme;
-}
+.dark {
+  @include dark ;
+}   

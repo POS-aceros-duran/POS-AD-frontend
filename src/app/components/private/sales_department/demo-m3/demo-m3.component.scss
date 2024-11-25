@@ -1,0 +1,43 @@
+@use '../../../../../styles/theming/custom-theme.scss' as custom-theme;
+@use "@angular/material" as mat;
+
+button,
+a {
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+p {
+  padding: 5px 15px;
+}
+
+.demo-section-header {
+  font-weight: 500;
+  margin: 0;
+}
+
+.demo-no-flex {
+  display: block;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.example-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container{
+  background-color: var(--background);
+}           
