@@ -27,7 +27,11 @@ export const routes: Routes = [
       {
         path: 'tables',
         loadComponent: () => import('./components/business/tables/tables.component')
-      } 
+      },
+      {
+        path: 'products',
+        loadComponent: () => import('./components/business/products/products.component')
+      }
     ]
   }
 
@@ -41,4 +45,6 @@ export const routes: Routes = [
     //loadChildren: () => import('./components/private/admins/admin.route')
   },
   */
+
+  
 ];
