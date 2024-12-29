@@ -5,12 +5,11 @@
 }
 .active {
     font-weight: bold; 
-    background-color: var(--outline );    /* Fondo blanco para el botón activo */
+    background-color: var(--onPrimary);    /* Fondo blanco para el botón activo */
     border-radius: 8px;    /* Opcional: bordes redondeados para el botón */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);    /* Sombra ligera para resaltar */
-    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);    /* Sombra ligera para resaltar */    
 }
 .textSidebar {
     font-weight: bold;
-    color: var(--onPrimary); /* Cambia el color del texto*/
+    color: var(--primary); /* Cambia el color del texto*/
 }
