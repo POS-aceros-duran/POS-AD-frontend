@@ -1,25 +1,41 @@
 <!-- component -->
+<div class="flex min-h-screen">
+  <!-- Sidebar (colapsable) -->
+  <div :class="sidebarClass" class="transition-all duration-300 ease-in-out">
+    <app-sidebar />
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="flex-1 p-4">
+    <router-outlet /> <!-- Importación del contenido -->
+  </div>
+</div>
+
+
+
+
+<!-- component 
 <div class="min-h-screen bg-gray-50/50">
     <div > 
-      <app-sidebar /><!-- Importacion del siderbar izquierda-->
+      <app-sidebar /> Importacion del siderbar izquierda
     </div>
        
     <div class="">
         <nav class="block w-full max-w-full bg-transparent text-white shadow-none rounded-xl transition-all px-0 py-1">
-          <app-navbar /><!-- Importacion del header encabezado -->
+          <app-navbar /> Importacion del header encabezado 
         </nav>
     </div>
 
 
     <div class="p-4 xl:ml-60">        
-      <div class="mt-16"> <!--Searar el navbar y contenido-->
-        <router-outlet/> <!-- Importacion el contenido -->
+      <div class="mt-16"> Searar el navbar y contenido
+        <router-outlet/>  Importacion el contenido 
       </div>
-<!---
+
     <div class="text-blue-gray-600">
       <app-footer/>  Importacion del footer         
     </div>
--->   
+   
   </div>
 </div>
-
+-->

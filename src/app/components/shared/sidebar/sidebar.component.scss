@@ -13,3 +13,8 @@
     font-weight: bold;
     color: var(--primary); /* Cambia el color del texto*/
 }
+
+.header {
+    background-color: var(--secondary);
+    border-color: var(--secondary); /* Aplicar el color al borde */
+}

@@ -3,13 +3,13 @@ import { FooterComponent } from '../footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../../sidebar/sidebar.component';
 import { NavbarComponent } from '../navbar/navbar.component';
+import AdicionalComponent from "../../../private/sales_department/components/products/registerproduct/adicional/adicional.component";
 
 @Component({
   /**Importar componentes */
   selector: 'app-layout',
   standalone: true,
-  imports: [SidebarComponent, FooterComponent, RouterOutlet, NavbarComponent
-  ],
+  imports: [SidebarComponent, FooterComponent, RouterOutlet, NavbarComponent, AdicionalComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
