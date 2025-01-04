@@ -30,11 +30,31 @@ export const routes: Routes = [
         loadComponent: () => import('./components/private/sales_department/components/tables/tables.component')
       },
       {
+        path: 'register',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/registerproduct.component'),
+          
+      },
+      {
+            path: 'controlarInventario',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/controlar-inventario/controlar-inventario.component'),
+          },
+          {
+            path: 'adicional',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/adicional/adicional.component'),
+          },
+      {
         path: 'products',
-        loadComponent: () => import('./components/private/sales_department/components/products/products.component')
-      }
-    ]
-  }
+        loadComponent: () => import('./components/private/sales_department/components/products/products.component'),
+      },
+    ],
+  },
+       
+      
+    ];
+  
 
 /*   {
     path: '',
@@ -48,4 +68,3 @@ export const routes: Routes = [
   */
 
   
-];
