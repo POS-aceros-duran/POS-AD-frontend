@@ -18,18 +18,43 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadComponent: () => import('./components/business/dashboard/dashboard.component')
+        loadComponent: () => import('./components/private/sales_department/components/dashboard/dashboard.component')
+                        
       },
       {
         path: 'profile',
-        loadComponent: () => import('./components/business/profile/profile.component')
+        loadComponent: () => import('./components/private/sales_department/components/profile/profile.component')
       },
       {
         path: 'tables',
-        loadComponent: () => import('./components/business/tables/tables.component')
-      } 
-    ]
-  }
+        loadComponent: () => import('./components/private/sales_department/components/tables/tables.component')
+      },
+      {
+        path: 'register',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/registerproduct.component'),
+          
+      },
+      {
+            path: 'controlarInventario',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/controlar-inventario/controlar-inventario.component'),
+          },
+          {
+            path: 'adicional',
+            loadComponent: () =>
+              import('./components/private/sales_department/components/products/registerproduct/adicional/adicional.component'),
+          },
+      {
+        path: 'products',
+        loadComponent: () => import('./components/private/sales_department/components/products/products.component'),
+      },
+    ],
+  },
+       
+      
+    ];
+  
 
 /*   {
     path: '',
@@ -41,4 +66,5 @@ export const routes: Routes = [
     //loadChildren: () => import('./components/private/admins/admin.route')
   },
   */
-];
+
+  

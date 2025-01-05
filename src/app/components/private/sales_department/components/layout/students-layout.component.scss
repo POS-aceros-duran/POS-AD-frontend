@@ -2,3 +2,20 @@
     background-color: var( --on-primary);
   }
   
+    :host {
+      display: flex;
+      height: 100vh; // Asegura que ocupe toda la pantalla.
+    }
+  
+    app-side-nav {
+      width: 16rem; // Define el ancho fijo del sidebar.
+    }
+  
+    .flex-1 {
+      flex: 1; // Permite que este contenedor ocupe el espacio restante.
+    }
+  
+    .overflow-y-auto {
+      overflow-y: auto; // Habilita el scroll vertical.
+    }
+    

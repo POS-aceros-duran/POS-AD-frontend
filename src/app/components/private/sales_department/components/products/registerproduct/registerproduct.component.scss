@@ -1,0 +1,91 @@
+.carousel-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.image-list {
+    display: flex;
+    gap: 15px;
+    /* Espaciado entre imágenes */
+    overflow-x: auto;
+    /* Habilitar desplazamiento horizontal */
+    padding: 10px;
+    border: 1px solid var(--outlineVariant) ;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.image-wrapper {
+    display: inline-block;
+}
+
+.carousel-image {
+    max-height: 150px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    /* Espaciado entre botones */
+    justify-content: center;
+}
+
+.add-image-button,
+.remove-image-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary );
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-image-button:hover {
+    background-color: var(--onSecondaryContainer);
+}
+
+.remove-image-button {
+    background-color: var(--error);
+    /* Rojo para el botón de eliminar */
+}
+
+.remove-image-button:hover {
+    background-color: var(--onErrorContainer);
+}
+
+.remove-image-button:disabled {
+    background-color: var(--outlineVariant);
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+.Border_form {
+    border: 2px solid #007bff;
+    /* Cambia el color (#007bff) y el grosor (2px) según lo necesites */
+    padding: 20px;
+    /* Añade espacio dentro del formulario, si lo deseas */
+    border-radius: 8px;
+    /* Opcional, para darle bordes redondeados */
+}
+
+.button {
+    background-color: var(--secondary);
+}
+
+.margin {
+    margin-top: 20px;
+    /* Espacio encima del form */
+}
