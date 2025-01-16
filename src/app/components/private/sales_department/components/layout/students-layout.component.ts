@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent, SideNavComponent } from '@app/shared';
-import { FooterComponent } from "../../../../../shared/components/footer/footer.component";
+import { HeaderComponent, SideNavComponent,FooterComponent } from '@app/shared';
 
 @Component({
   selector: 'app-students-layout',

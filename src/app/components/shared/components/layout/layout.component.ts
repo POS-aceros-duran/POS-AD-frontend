@@ -3,7 +3,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../../sidebar/sidebar.component';
 import { NavbarComponent } from '../navbar/navbar.component';
-import AdicionalComponent from "../../../private/sales_department/components/products/registerproduct/adicional/adicional.component";
+import AdicionalComponent from "../../../private/sales_department/components/products/registerproduct/aditionall/aditional.component";
 
 @Component({
   /**Importar componentes */

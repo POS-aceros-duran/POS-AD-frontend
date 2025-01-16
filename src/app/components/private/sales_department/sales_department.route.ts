@@ -16,6 +16,58 @@ export default [
                     ),
             },
             {
+                path: 'dashboard',
+                loadComponent: () =>
+                    import('./components/dashboard/dashboard.component').then(
+                        (m) => m.DashboardComponent
+                        
+                    )
+
+            },            
+            {
+                path: 'product',
+                loadComponent: () =>
+                    import('./components/products/products.component').then(
+                        (m) => m.ProductsComponent
+                    ),
+            }, 
+            {
+                path: 'registerP',
+                loadComponent: () =>
+                    import('./components/products/registerproduct/registerproduct.component').then(
+                        (m) => m.default
+                    ),
+            },
+            {
+                path: 'controlarInventario',
+                loadComponent: () =>
+                    import('./components/products/registerproduct/controlar-inventario/controlar-inventario.component').then(
+                        (m) => m.default
+                    ),
+            },
+            {
+                path: 'aditional',
+                loadComponent: () =>
+                    import('./components/products/registerproduct/aditional/aditional.component').then(
+                        (m) => m.default
+                    ),
+            },  
+            {
+                path: 'profile',
+                loadComponent: () =>
+                    import('./components/profile/profile.component').then(
+                        (m) => m.ProfileComponent
+                    )
+
+            },
+            {
+                path: 'tables',
+                loadComponent: () =>
+                    import('./components/tables/tables.component').then(
+                        (m) => m.default
+                    )
+            },                  
+            {
                 path: '**',
                 pathMatch: 'full',
                 redirectTo: '',

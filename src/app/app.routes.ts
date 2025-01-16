@@ -7,56 +7,12 @@ export const routes: Routes = [
   {
     path: 'sales-department',
     loadChildren: () => import('./components/private/sales_department/sales_department.route')
-  },
-  {
-    path: '',
-    component: LoginContainerComponent,
-  },
-  {
-    path: '',
-    loadComponent: () => import('./components/shared/components/layout/layout.component'),
-    children: [
-      {
-        path: 'dashboard',
-        loadComponent: () => import('./components/private/sales_department/components/dashboard/dashboard.component')
-                        
-      },
-      {
-        path: 'profile',
-        loadComponent: () => import('./components/private/sales_department/components/profile/profile.component')
-      },
-      {
-        path: 'tables',
-        loadComponent: () => import('./components/private/sales_department/components/tables/tables.component')
-      },
-      {
-        path: 'register',
-            loadComponent: () =>
-              import('./components/private/sales_department/components/products/registerproduct/registerproduct.component'),
-          
-      },
-      {
-            path: 'controlarInventario',
-            loadComponent: () =>
-              import('./components/private/sales_department/components/products/registerproduct/controlar-inventario/controlar-inventario.component'),
-          },
-          {
-            path: 'adicional',
-            loadComponent: () =>
-              import('./components/private/sales_department/components/products/registerproduct/adicional/adicional.component'),
-          },
-      {
-        path: 'products',
-        loadComponent: () => import('./components/private/sales_department/components/products/products.component'),
-      },
-    ],
-  },
-       
-      
-    ];
+  },   
   
-
-/*   {
+];
+  
+/*
+{
     path: '',
     //loadChildren: () => import('./components/public/login/login.route.ts')
   },
@@ -65,6 +21,5 @@ export const routes: Routes = [
     path: 'admin',
     //loadChildren: () => import('./components/private/admins/admin.route')
   },
-  */
-
+*/
   
