@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent, SideNavComponent } from '@app/shared';
+import { HeaderComponent, SideNavComponent,FooterComponent } from '@app/shared';
 
 @Component({
   selector: 'app-students-layout',
   standalone: true,
   imports: [
-    RouterOutlet, SideNavComponent, HeaderComponent
-  ],
+    RouterOutlet, SideNavComponent, HeaderComponent,
+    FooterComponent
+],
   templateUrl: './students-layout.component.html',
   styleUrl: './students-layout.component.scss'
 })

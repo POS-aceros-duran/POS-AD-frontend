@@ -7,31 +7,12 @@ export const routes: Routes = [
   {
     path: 'sales-department',
     loadChildren: () => import('./components/private/sales_department/sales_department.route')
-  },
-  {
-    path: '',
-    component: LoginContainerComponent,
-  },
-  {
-    path: '',
-    loadComponent: () => import('./components/shared/components/layout/layout.component'),
-    children: [
-      {
-        path: 'dashboard',
-        loadComponent: () => import('./components/business/dashboard/dashboard.component')
-      },
-      {
-        path: 'profile',
-        loadComponent: () => import('./components/business/profile/profile.component')
-      },
-      {
-        path: 'tables',
-        loadComponent: () => import('./components/business/tables/tables.component')
-      } 
-    ]
-  }
-
-/*   {
+  },   
+  
+];
+  
+/*
+{
     path: '',
     //loadChildren: () => import('./components/public/login/login.route.ts')
   },
@@ -40,5 +21,5 @@ export const routes: Routes = [
     path: 'admin',
     //loadChildren: () => import('./components/private/admins/admin.route')
   },
-  */
-];
+*/
+  

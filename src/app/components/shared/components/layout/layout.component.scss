@@ -1,0 +1,16 @@
+.min-h-screen {
+    display: flex;
+    /* Define un contenedor flex */
+    flex-direction: row;
+    /* Coloca los elementos en línea horizontal */
+}
+
+.xl\:w-60 {
+    flex: 0 0 15rem;
+    /* Fija el ancho del sidebar (60 * 4 px = 240px en pantallas grandes) */
+}
+
+.flex-1 {
+    flex: 1;
+    /* El contenido principal ocupará el resto del espacio */
+}

@@ -1,0 +1,20 @@
+
+.aside {
+    //Color de fondo
+    background-color: var(--onPrimaryContainer);
+}
+.active {
+    font-weight: bold; 
+    background-color: var(--onPrimary);    /* Fondo blanco para el botón activo */
+    border-radius: 8px;    /* Opcional: bordes redondeados para el botón */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);    /* Sombra ligera para resaltar */    
+}
+.textSidebar {
+    font-weight: bold;
+    color: var(--primary); /* Cambia el color del texto*/
+}
+
+.header {
+    background-color: var(--secondary);
+    border-color: var(--secondary); /* Aplicar el color al borde */
+}

@@ -1,0 +1,41 @@
+.margin {
+    margin-top: 20px;
+    /* Espacio encima del form */
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    /* Espaciado entre botones */
+    justify-content: center;
+}
+
+.add-image-button,
+.remove-image-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-image-button:hover {
+    background-color: var(--onSecondaryContainer);
+}
+
+
+.Border_form {
+    border: 2px solid #007bff;
+    /* Cambia el color (#007bff) y el grosor (2px) según lo necesites */
+    padding: 20px;
+    /* Añade espacio dentro del formulario, si lo deseas */
+    border-radius: 8px;
+    /* Opcional, para darle bordes redondeados */
+}
+
+.button {
+    background-color: var(--secondary);
+}

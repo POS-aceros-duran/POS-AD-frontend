@@ -67,7 +67,7 @@ html, body {
 
 @mixin dark {
   --primary: #ADC6FF;
-  --surfaceTint: #ADC6FF;
+  --surfaceTint: hsl(222, 100%, 84%);
   --onPrimary: #112F60;
   --primaryContainer: #2B4678;
   --onPrimaryContainer: #D8E2FF;
